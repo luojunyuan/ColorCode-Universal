@@ -32,7 +32,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ColorCode.UWP", "ColorCode.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ColorCode.UWPTests", "Tests\ColorCode.UWPTests\ColorCode.UWPTests.csproj", "{A3D5A8A5-1D1F-412D-A829-C3DC1C7D4DF3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ColorCode.UWP.Modern", "ColorCode.UWP.Modern\ColorCode.UWP.Modern.csproj", "{DBD176D8-C7A7-FA28-39CC-9C4D7EFE8AA8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ColorCode.ModernUWP", "ColorCode.ModernUWP\ColorCode.ModernUWP.csproj", "{DBD176D8-C7A7-FA28-39CC-9C4D7EFE8AA8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

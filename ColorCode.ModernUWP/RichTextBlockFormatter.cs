@@ -16,7 +16,7 @@ using Microsoft.UI.Text;
 #else
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Documents;
-using ColorCode.UWP.Common;
+using ColorCode.WinUI.Common;
 using Windows.UI.Xaml;
 #endif
 

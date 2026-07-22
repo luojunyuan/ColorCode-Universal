@@ -10,7 +10,7 @@ namespace ColorCode.WinUI.Common
 #else
 using Windows.UI.Xaml.Media;
 
-namespace ColorCode.UWP.Common
+namespace ColorCode.WinUI.Common
 #endif
 {
     public static class ExtensionMethods

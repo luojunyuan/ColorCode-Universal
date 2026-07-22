@@ -1,0 +1,45 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0-windows10.0.26100.0</TargetFramework>
+    <TargetPlatformMinVersion>10.0.17763.0</TargetPlatformMinVersion>
+    <UseUwp>true</UseUwp>
+    <UseUwpTools>false</UseUwpTools>
+    <RootNamespace>ColorCode</RootNamespace>
+    <AssemblyName>ColorCode.WinUI</AssemblyName>
+    <Nullable>disable</Nullable>
+    <DisableRuntimeMarshalling>true</DisableRuntimeMarshalling>
+
+    <PackageId>ColorCode.ModernUWP</PackageId>
+    <Title>ColorCode.ModernUWP</Title>
+    <Description>Contains the RichTextBlockFormatter, for rendering the Colorized Code to a RichTextBlock. Modern net9.0 UWP port with a WinUI-compatible API.</Description>
+    <PackageTags>ColorCode;Syntax;Highlight;SyntaxHighlighting;Formatting;UWP;WinUI;RichTextBlock;Modern</PackageTags>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <Version>1.0.0</Version>
+    <Authors>k1mlka</Authors>
+    <IsUwpProject>false</IsUwpProject>
+    <ColorCodeCorePackageVersion>2.0.15</ColorCodeCorePackageVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Remove="MSBuild.Sdk.Extras" />
+    <PackageReference Remove="Nerdbank.GitVersioning" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ColorCode.Core\ColorCode.Core.csproj" />
+  </ItemGroup>
+
+  <!-- Publish against the stable Core package available on NuGet. -->
+  <Target Name="UseStableColorCodeCorePackageVersion" AfterTargets="_GetProjectReferenceVersions">
+    <ItemGroup>
+      <_ProjectReferencesWithVersions
+        Update="@(_ProjectReferencesWithVersions)"
+        Condition="'%(Filename)' == 'ColorCode.Core'">
+        <ProjectVersion>$(ColorCodeCorePackageVersion)</ProjectVersion>
+      </_ProjectReferencesWithVersions>
+    </ItemGroup>
+  </Target>
+
+</Project>
